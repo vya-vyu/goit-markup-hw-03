@@ -51,7 +51,6 @@
       </div>
     </header>
     <main>
-      <div class="banner">
         <section class="hero">
           <div class="container">
             <h1 class="hero-title">
@@ -63,35 +62,34 @@
             </button>
           </div>
         </section>
-      </div>
       <!-- Переваги -->
       <section class="section advantage">
         <div class="container">
-          <h2 class="section-title advantage-title">Переваги</h2>
+          <h2 class="visually-hidden">Переваги</h2>
           <ul class="list advantage-list">
             <li class="advantage-item">
-              <h3 class="title">УВАГА ДО ДЕТАЛЕЙ</h3>
+              <h3 class="title advantage-title">УВАГА ДО ДЕТАЛЕЙ</h3>
               <p class="advantage-text">
                 Ідейні міркування, і навіть початок повсякденної роботи з
                 формування позиції.
               </p>
             </li>
-            <li>
-              <h3 class="title">ПУНКТУАЛЬНІСТЬ</h3>
-              <p>
+            <li class="advantage-item">
+              <h3 class="title advantage-title">ПУНКТУАЛЬНІСТЬ</h3>
+              <p class="advantage-text">
                 Завдання організації, особливо рамки і місце навчання кадрів
                 тягне у себе.
               </p>
             </li>
-            <li>
-              <h3 class="title">ПЛАНУВАННЯ</h3>
-              <p>
+            <li class="advantage-item">
+              <h3 class="title advantage-title">ПЛАНУВАННЯ</h3>
+              <p class="advantage-text">
                 Так само консультація з широким активом значною мірою зумовлює.
               </p>
             </li>
-            <li>
-              <h3 class="title">СУЧАСНІ ТЕХНОЛОГІЇ</h3>
-              <p>
+            <li class="advantage-item">
+              <h3 class="title advantage-title">СУЧАСНІ ТЕХНОЛОГІЇ</h3>
+              <p class="advantage-text">
                 Значимість цих проблем настільки очевидна, що реалізація
                 планових завдань.
               </p>
@@ -102,61 +100,72 @@
       <!-- Чим ми займаємося -->
       <section class="section">
         <div class="container">
-          <h2 class="section-title">Чим ми займаємося</h2>
-          <ul class="list">
-            <li>
+          <h2 class="section-title what-we-do-title">Чим ми займаємося</h2>
+          <ul class="list what-we-do-list">
+            <li class="what-we-do-item">
               <img src="./images/box1.jpg" alt="ноутбук" width="370" />
             </li>
-            <li>
+            <li class="what-we-do-item">
               <img src="./images/box2.jpg" alt="телефон" width="370" />
             </li>
-            <li>
+            <li class="what-we-do-item">
               <img src="./images/box3.jpg" alt="планшет" width="370" />
             </li>
           </ul>
         </div>
       </section>
       <!-- наша комманда -->
-      <section class="section">
+      <section class="section team">
         <div class="container">
-          <h2 class="section-title">Наша команда</h2>
-          <ul class="team list">
-            <li>
+          <h2 class="section-title team-saction-title">Наша команда</h2>
+          <ul class="team-list list">
+            <li class="team-item">
               <img src="./images/ihor.jpg" alt="Ігор Дем'яненко" width="270" />
-              <h3 class="title">Ігор Дем'яненко</h3>
-              <p>Product Designer</p>
+              <div class="team-description">
+                <h3 class="title team-name">Ігор Дем'яненко</h3>
+                <p class="team-position">Product Designer</p>
+              </div>
             </li>
-            <li>
+            <li class="team-item">
               <img src="./images/olga.jpg" alt="Ольга Рєпіна" width="270" />
-              <h3 class="title">Ольга Рєпіна</h3>
-              <p>Frontend Developer</p>
+              <div class="team-description">
+                <h3 class="title team-name">Ольга Рєпіна</h3>
+                <p class="team-position">Frontend Developer</p>
+              </div>
             </li>
-            <li>
+            <li class="team-item">
               <img src="./images/mikola.jpg" alt="Микола Тарасов" width="270" />
-              <h3 class="title">Микола Тарасов</h3>
-              <p>Marketing</p>
+              <div class="team-description">
+                <h3 class="title team-name">Микола Тарасов</h3>
+                <p class="team-position">Marketing</p>
+              </div>
             </li>
-            <li>
+            <li class="team-item">
               <img
                 src="./images/mihailo.jpg"
                 alt="Михайло Єрмаков"
                 width="270"
               />
-              <h3 class="title">Михайло Єрмаков</h3>
-              <p>UI Designer</p>
+              <div class="team-description">
+                <h3 class="title team-name">Михайло Єрмаков</h3>
+                <p class="team-position">UI Designer</p>
+              </div>
             </li>
           </ul>
         </div>
       </section>
     </main>
-    <footer>
+    <footer class="footer">
       <div class="container">
-        <a class="logo" href="./index.html">
-          Web<span class="footer">Studio</span>
-        </a>
+        <div class="footer-logo">
+          <a class="logo" href="./index.html">
+            Web<span class="footer">Studio</span>
+          </a>
+        </div>
+       
         <address>
           <ul class="list">
-            <li>
+            <li class="footer-item">
               <a
                 href="https://goo.gl/maps/SCkYAoC4yTZu4ZHw5"
                 target="_blank"
@@ -165,12 +174,12 @@
                 >м. Київ, пр-т Лесі Українки, 26</a
               >
             </li>
-            <li>
+            <li class="footer-item">
               <a href="mailto:info@devstudio.com" class="contacts"
                 >info@devstudio.com</a
               >
             </li>
-            <li>
+            <li class="footer-item">
               <a href="tel:+380961111111" class="contacts">+38 096 111 11 11</a>
             </li>
           </ul>

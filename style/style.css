@@ -52,10 +52,13 @@ body {
   text-decoration: none;
 }
 
-/* ------HEDER--------- */
+/*===========HEDER================== */
+.page-header {
+  border-bottom: 1px solid #ececec;
+}
 
 .container {
-  width: 1170px;
+  width: 1200px;
   padding: 0 15px;
   margin-left: auto;
   margin-right: auto;
@@ -63,7 +66,6 @@ body {
 .header-container {
   display: flex;
   align-items: center;
-
 }
 .site-nav-list {
   display: flex;
@@ -72,7 +74,7 @@ body {
   margin-right: 50px;
 }
 
-/* logo */
+/* ================= LOGO =================== */
 .logo {
   text-decoration: none;
   font-family: "Raleway";
@@ -95,7 +97,6 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   padding: 32px 0;
-  margin-right: 310px;
 }
 .nav-link {
   color: var(--title-text-color);
@@ -107,6 +108,9 @@ body {
 }
 
 /* HEDER CONTACTS */
+.contact-header {
+  margin-left: auto;
+}
 .contact-header a {
   color: var(--main-text-color);
   text-decoration: none;
@@ -126,9 +130,6 @@ body {
   margin-right: 50px;
 }
 /* герой */
-.banner {
-  background: #2f303a;
-}
 .hero-title {
   font-weight: 900;
   font-size: 44px;
@@ -156,13 +157,13 @@ body {
   margin-left: auto;
   margin-right: auto;
   border: 0px;
-
 }
 .hero-button:active {
   background-color: #188ce8;
 }
-.hero{
+.hero {
   height: 600px;
+  background: #2f303a;
 }
 
 /* секции */
@@ -181,25 +182,73 @@ body {
 }
 
 /* advantage */
-.advantage .title {
+
+.section.advantage {
+  padding-bottom: 0;
+}
+.advantage-list {
+  display: flex;
+  gap: 30px;
+}
+
+.advantage-item {
+  width: calc((100% - 3 * 30px) / 4);
+}
+
+.advantage-title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
-.advantage-list{
-  display: flex;
-}
-/* team */
 
-.team .title {
+/* ============  WHAT WE DO   ============== */
+
+.what-we-do-title {
+  margin-bottom: 50px;
+}
+.what-we-do-list {
+  display: flex;
+  gap: 30px;
+}
+.what-we-do-item {
+  width: calc((100% - 2 * 30px) / 3);
+}
+
+/* team */
+.team {
+  background-color: #f5f4fa;
+}
+
+.team-saction-title {
+  margin-bottom: 50px;
+}
+
+.team-list {
+  display: flex;
+  gap: 30px;
+}
+
+.team-item {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0 0 4px 4px;
+  background-color: var(--primary-white-color);
+}
+
+.team-description {
+  padding: 30px 0;
+}
+
+.team-name {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
-
   text-align: center;
+  margin-bottom: 10px;
 }
-.team p {
+.team-position {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.19;
@@ -209,8 +258,12 @@ body {
 }
 
 /* footer */
-footer {
+.footer {
   background-color: #2f303a;
+  padding: 60px 0;
+}
+.footer-logo {
+  margin-bottom: 20px;
 }
 
 .logo .footer {
@@ -231,18 +284,12 @@ footer {
   color: var(--accent-color);
 }
 
-/* button portfolio */
-.portfolio .primary,
-.portfolio .secondary {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.62;
+.footer-item:not(:last-child) {
+  margin-bottom: 9px;
+}
 
-  text-align: center;
-}
-.button {
-  color: var(--title-text-color);
-}
+/* button portfolio */
+
 .primary {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
@@ -262,8 +309,11 @@ footer {
   cursor: pointer;
 }
 
-/* portfolio */
-
+/* ==========  PORTFOLIO ====================== */
+.portfolio {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 .portfolio .title {
   font-weight: 700;
   font-size: 18px;
@@ -277,3 +327,64 @@ footer {
   font-size: 16px;
   line-height: 1.87;
 }
+
+.portfolio-filter-list {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.portfolio-filter-btn {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  border: 0;
+  padding: 6px 22px;
+  min-width: 73px;
+  border-radius: 4px;
+}
+.portfolio-filter-item {
+  min-width: 73px;
+  text-align: center;
+}
+
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.portfolio-list-item {
+  width: 370px;
+}
+
+.portfolio-link {
+  height: 100%;
+}
+.portfolio-item-description {
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 370px;
+
+  border: 1px solid #eeeeee;
+  border-top: 0;
+}
+
+/* =========   HIDDEN  ============= */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+/* =========   HIDDEN  ============= */
