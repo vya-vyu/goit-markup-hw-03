@@ -36,15 +36,12 @@ img {
 
 body {
   font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-
   color: var(--main-text-color);
   background-color: var(--primary-white-color);
 }
+
+/* ==================== /COMPONENTS ==================== */
+
 .list {
   list-style: none;
 }
@@ -52,7 +49,39 @@ body {
   text-decoration: none;
 }
 
-/*===========HEDER================== */
+.title {
+  color: var(--title-text-color);
+}
+
+.section {
+  padding: 94px 0;
+}
+.section-title {
+  color: var(--title-text-color);
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+
+/* ==================== /COMPONENTS ==================== */
+
+/* =========   HIDDEN  ============= */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+/* =========   HIDDEN  ============= */
+
+/*===========        HEDER     ================== */
 .page-header {
   border-bottom: 1px solid #ececec;
 }
@@ -88,6 +117,7 @@ body {
 .logo span {
   color: var(--title-text-color);
 }
+/* ================= LOGO =================== */
 
 /* site nav */
 
@@ -96,10 +126,11 @@ body {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  padding: 32px 0;
 }
 .nav-link {
+  display: block;
   color: var(--title-text-color);
+  padding: 32px 0;
 }
 .nav-link:hover,
 .nav-link:focus,
@@ -111,7 +142,7 @@ body {
 .contact-header {
   margin-left: auto;
 }
-.contact-header a {
+.contact-link {
   color: var(--main-text-color);
   text-decoration: none;
   font-weight: 500;
@@ -119,8 +150,11 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
-.contact-header a:hover,
-.contact-header a:focus {
+.contact-link {
+  padding: 32px 0;
+}
+.contact-link:hover,
+.contact-link:focus {
   color: var(--accent-color);
 }
 .contact-list {
@@ -129,7 +163,8 @@ body {
 .contact-item:not(:last-child) {
   margin-right: 50px;
 }
-/* герой */
+
+/* ===============   HERO   ========================== */
 .hero-title {
   max-width: 700px;
   font-weight: 900;
@@ -140,7 +175,6 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--primary-white-color);
-  padding-top: 200px;
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
@@ -161,34 +195,19 @@ body {
   margin-right: auto;
   border: 0px;
 }
-.hero-button:active {
+.hero-button:active,
+.hero-button:hover,
+.hero-button:focus {
   background-color: #188ce8;
 }
 .hero {
-  height: 600px;
   background: #2f303a;
+  padding: 200px 0;
 }
+/* ===============   HERO   ========================== */
 
-/* секции */
-.section {
-  padding: 94px 0;
-}
-.section-title {
-  color: var(--title-text-color);
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-}
-.title {
-  color: var(--title-text-color);
-}
+/*==================    ADVANTAGE   =======================*/
 
-/* advantage */
-
-.section.advantage {
-  padding-bottom: 0;
-}
 .advantage-list {
   display: flex;
   gap: 30px;
@@ -206,7 +225,18 @@ body {
   margin-bottom: 10px;
 }
 
+.advantage-text {
+  font-size: 14px;
+  line-height: 1.71;
+
+  letter-spacing: 0.03em;
+}
+/*==================    ADVANTAGE   =======================*/
+
 /* ============  WHAT WE DO   ============== */
+.what-we-do {
+  padding-top: 0;
+}
 
 .what-we-do-title {
   margin-bottom: 50px;
@@ -218,8 +248,9 @@ body {
 .what-we-do-item {
   width: calc((100% - 2 * 30px) / 3);
 }
+/* ============  WHAT WE DO   ============== */
 
-/* team */
+/*==============    TEAM   ================= */
 .team {
   background-color: #f5f4fa;
 }
@@ -260,7 +291,9 @@ body {
   color: var(--main-text-color);
 }
 
-/* footer */
+/*==============    TEAM   ================= */
+
+/* =================     FOOTER    ================ */
 .footer {
   background-color: #2f303a;
   padding: 60px 0;
@@ -290,6 +323,7 @@ body {
 .footer-item:not(:last-child) {
   margin-bottom: 9px;
 }
+/* =================     FOOTER    ================ */
 
 /* button portfolio */
 
@@ -313,18 +347,14 @@ body {
 }
 
 /* ==========  PORTFOLIO ====================== */
-.portfolio {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-.portfolio .title {
+.portfolio-item-title {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
 
   letter-spacing: 0.06em;
 }
-.portfolio p {
+.portfolio-item-text {
   color: var(--main-text-color);
   font-weight: 400;
   font-size: 16px;
@@ -359,35 +389,20 @@ body {
 }
 
 .portfolio-list-item {
-  width: 370px;
+  flex-basis: calc((100% - 2 * 30px) / 3);
 }
 
 .portfolio-link {
   height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .portfolio-item-description {
   padding: 20px 24px;
-  display: flex;
-  flex-direction: column;
   flex-grow: 1;
-  width: 370px;
 
   border: 1px solid #eeeeee;
   border-top: 0;
 }
 
-/* =========   HIDDEN  ============= */
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-/* =========   HIDDEN  ============= */
+/* ==========  PORTFOLIO ====================== */
