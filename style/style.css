@@ -7,14 +7,6 @@
   --accent-color: #2196f3;
   --primary-white-color: #ffffff;
 }
-html {
-  box-sizing: border-box;
-}
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
 
 h1,
 h2,
@@ -114,7 +106,7 @@ body {
   color: var(--accent-color);
   margin-right: 93px;
 }
-.logo span {
+.logo-accent {
   color: var(--title-text-color);
 }
 /* ================= LOGO =================== */
@@ -151,6 +143,7 @@ body {
   letter-spacing: 0.02em;
 }
 .contact-link {
+  display: block;
   padding: 32px 0;
 }
 .contact-link:hover,
@@ -302,7 +295,7 @@ body {
   margin-bottom: 20px;
 }
 
-.logo .footer {
+.footer-logo-accent{
   color: var(--primary-white-color);
 }
 .address {
@@ -310,13 +303,19 @@ body {
   text-decoration: none;
   font-style: normal;
 }
-.contacts {
+.footer-contacts {
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
   font-style: normal;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
 }
-.contacts:hover,
-.contacts:focus {
+.footer-contacts:hover,
+.footer-contacts:focus {
   color: var(--accent-color);
 }
 
